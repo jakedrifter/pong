@@ -90,7 +90,7 @@ while running:
         paddle_l_y = (screen.get_height() / 2) - (paddle_height / 2)
         l_score += 1
     
-    #see if ball hit top or bottom
+    #see if ball hit top or bottom of screen
     if ball_y <= 0 or ball_y >= screen.get_height() - ball_size:
         ball_y_vel *= -1
 
