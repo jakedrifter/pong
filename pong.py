@@ -27,12 +27,12 @@ ball_y_vel = (ball_speed * -math.sin(math.radians(ball_angle)))
 l_score = 0
 r_score = 0
 
-font=pygame.font.Font(None,50)
 
+#score
+font=pygame.font.Font(None,50)
 def l_score_text(l_score):
    l_score_disp=font.render(str(l_score), 1,(255,255,255))
    screen.blit(l_score_disp, ((screen.get_width() / 2 - 50), 10))
-
 def r_score_text(r_score):
    r_score_disp=font.render(str(r_score), 1,(255,255,255))
    screen.blit(r_score_disp, ((screen.get_width() / 2 + 10), 10))
