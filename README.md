@@ -1,2 +1,2 @@
 # pong
-A simple pong game in Python.
+A simple pong game in Python. Requires Pygame to run
