@@ -94,7 +94,7 @@ while running:
     if ball_y <= 0 or ball_y >= screen.get_height() - ball_size:
         ball_y_vel *= -1
 
-    #computer controls, for single player. this code and use w and s keys for 2 player
+    #computer controls for left paddle. delete this code for 2 player mode.
     if ball_y + (ball_size / 2) + 30 < paddle_l_y + (paddle_height / 2) and paddle_l_y > 0 and ball_x_vel < 0:
         paddle_l_y -= paddle_speed * .7
     if ball_y + (ball_size / 2) - 30 > paddle_l_y + (paddle_height / 2) and paddle_l_y + paddle_height < screen.get_height() and ball_x_vel < 0:
