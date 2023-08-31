@@ -96,9 +96,9 @@ while running:
 
     #computer controls for left paddle. delete this code for 2 player mode.
     if ball_y + (ball_size / 2) + 30 < paddle_l_y + (paddle_height / 2) and paddle_l_y > 0 and ball_x_vel < 0:
-        paddle_l_y -= paddle_speed * .75
+        paddle_l_y -= paddle_speed * .7
     if ball_y + (ball_size / 2) - 30 > paddle_l_y + (paddle_height / 2) and paddle_l_y + paddle_height < screen.get_height() and ball_x_vel < 0:
-        paddle_l_y += paddle_speed * .75
+        paddle_l_y += paddle_speed * .7
     
     #add ball vectors to ball coords
     ball_x += ball_x_vel
