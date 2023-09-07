@@ -27,7 +27,6 @@ def r_score_text(r_score):
    r_score_disp=pygame.font.Font(None,60).render(str(r_score), 1,(255,255,255))
    screen.blit(r_score_disp, ((screen.get_width() / 1.5), 10))
 
-# sprite classes
 class Ball(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
@@ -57,15 +56,13 @@ class Paddle(pygame.sprite.Sprite):
             self.rect.y = 0
         if self.rect.y + paddle_height > screen.get_height():
             self.rect.y = screen.get_height() - paddle_height
-    
-# sprite groups
+
 ball = Ball((screen.get_width() / 2) - (ball_size / 2),(screen.get_height() / 2) - (ball_size / 2))
 ball_group = pygame.sprite.Group(ball)
 paddle_l = Paddle(paddle_width * 2,(screen.get_height() / 2) - (paddle_height / 2))
 paddle_r = Paddle(screen.get_width() - (paddle_width * 2),(screen.get_height() / 2) - (paddle_height / 2))
 paddle_group = pygame.sprite.Group(paddle_l,paddle_r)
 
-# game loop
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -124,7 +121,6 @@ while running:
         paddle_l_y_vel = 0
         paddle_l.rect.y = screen.get_height() - paddle_height
 
-    # render
     screen.fill("#212325")
     pygame.draw.rect(screen, "white", pygame.Rect((screen.get_width() / 2) - (line_width / 2), 0, line_width, screen.get_height()))
     ball_group.draw(screen)
